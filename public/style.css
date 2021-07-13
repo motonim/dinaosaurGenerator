@@ -1,14 +1,110 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 100%;
+  font-size: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  background: url('https://images.unsplash.com/photo-1448375240586-882707db888b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2250&q=80');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: 'Fredoka One', cursive;
+}
+
+.container {
+  padding: 3rem;
+  color: #fff;
+
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #fff;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: 27px 0;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+h1:after,
+h1:before {
+  content: ' ';
+  display: block;
+  border-bottom: 1px solid #999;
+  border-top: 1px solid #999;
+  height: 5px;
+  /* background-color: ; */
+}
+
+#btnLoad {
+  padding: 0.8rem 1.8rem;
+  border: none;
+  background-color: #c7c7c7;
+  border-radius: 5px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  transition: 300ms ease-in-out;
+  cursor: pointer;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+#btnLoad:hover {
+  background: #c7c7c7ab;
+}
+
+#dinoWrapper {
+  width: 70%;
+  max-width: 400px;
+  display: block;
+  margin: auto;
+}
+
+#dinoName {
+  background: #ffffffaf;
+  color: #333;
+  padding: 0.5rem 0.25rem;
+  border-radius: 1rem 1rem 0 0;
+  margin: 0 auto;
+  font-family: 'Bebas Neue', cursive;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+#dinoImage {
+  max-width: 100%;
+  border-radius: 0 0 1rem 1rem;
+}
+
+@media (min-width: 37.5em) {
+  h1 {
+    font-size: 3rem;
+  }
+
+  #dinoWrapper {
+    width: 80%;
+    max-width: 25rem;
+    display: block;
+    margin: auto;
+  }
+
+  #btnLoad {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    margin-bottom: 4rem;
+  }
 }
